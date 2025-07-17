@@ -1,0 +1,76 @@
+import java.text.SimpleDateFormat
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+
+}
+
+def appName = "PayMentAidlDemo"
+static def packageTime() {
+    return new SimpleDateFormat("yyyyMMdd").format(new Date())
+}
+
+
+android {
+    namespace 'com.wizarpos.aidldemo'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.wizarpos.aidldemo"
+        minSdk 23
+        targetSdk 33
+        versionCode 6
+        versionName "1.0.6"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+
+        }
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    // 修改apk的名称，并且指定输出路径
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+//            def flavor = variant.productFlavors[0].name
+            def buildType = variant.buildType.name
+            def version = variant.versionName
+
+//            outputFileName = "${appName}_V${defaultConfig.versionName}_${packageTime()}_${variant.buildType.name}_Beta.apk"
+            outputFileName = "${appName}_${buildType}_V${version}_${packageTime()}.apk"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'com.google.code.gson:gson:2.11.0'
+//    implementation 'com.kncept:kncept-ksuid:1.0.0'
+
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

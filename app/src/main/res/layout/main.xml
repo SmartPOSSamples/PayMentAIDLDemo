@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:fitsSystemWindows="true"
+    android:id="@+id/ll_root">
+    <ScrollView
+        android:id="@+id/sv_log"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/aidl_demo"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <Button
+                android:id="@+id/btn_kiosk_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lock_task_mode_txt"
+                />
+
+            <Button
+                android:id="@+id/btn_bind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bind"
+                />
+
+            <EditText
+                android:id="@+id/et_trans_amount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/please_input_trans_amount"
+                android:text="@string/trans_amount_demo"/>
+            <EditText
+                android:id="@+id/et_tip_amount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/please_input_tip_amount"
+                android:text="@string/tip_amount_demo"/>
+            <EditText
+                android:id="@+id/et_other_amount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/please_input_other_amount"
+                android:text="@string/other_amount_demo"/>
+            <Button
+                android:id="@+id/btn_start_trans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_trans"/>
+
+            <Button
+                android:id="@+id/btn_cancel_trans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/end_trans"/>
+
+            <EditText
+                android:id="@+id/et_old_trace"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:hint="@string/please_input_old_trace"
+                android:imeOptions="actionDone"
+                />
+
+            <EditText
+                android:id="@+id/et_old_trans_index_code"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/please_input_old_trans_index_code"
+                android:imeOptions="actionDone"/>
+            <EditText
+                android:id="@+id/et_old_trans_id"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/please_input_old_transid"
+                android:imeOptions="actionDone"/>
+            <EditText
+                android:id="@+id/et_old_trans_rrn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/please_input_old_rrn"
+                android:imeOptions="actionDone"/>
+            <EditText
+                android:id="@+id/et_old_trans_invoice_number"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:hint="@string/please_input_old_invoice_number"
+                android:imeOptions="actionDone"/>
+            <Button
+                android:id="@+id/btn_reversal_trans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reversal_trans"/>
+
+            <Button
+                android:id="@+id/btn_qr_sale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QrSale"/>
+
+            <Button
+                android:id="@+id/btn_pre_auth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PreAuth"/>
+
+            <Button
+                android:id="@+id/btn_auth_increment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AuthIncrement"/>
+
+
+            <Button
+                android:id="@+id/btn_auth_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PreAuthComplete"/>
+
+            <Button
+                android:id="@+id/btn_refund"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Refund"/>
+
+            <Button
+                android:id="@+id/btn_getPosInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GetPosInfo"/>
+
+
+            <Button
+                android:id="@+id/btn_QueryDeal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QueryDeal"/>
+
+            <Button
+                android:id="@+id/btn_batchClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CloseBatch"/>
+            <Button
+                android:id="@+id/btn_printlast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Print Last"/>
+            <Button
+                android:id="@+id/btn_print_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Print Total"/>
+            <Button
+                android:id="@+id/btn_print_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Print Detail"/>
+
+            <Button
+                android:id="@+id/btn_print_parameter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Print Parameter"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

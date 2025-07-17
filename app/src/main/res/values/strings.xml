@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">aidldemo</string>
+    <string name="end_trans">END TRANS</string>
+    <string name="start_trans">START TRANS</string>
+    <string name="bind">BIND</string>
+    <string name="reversal_trans">Reversal Trans</string>
+    <string name="please_input_old_trace">OriTrace</string>
+    <string name="please_input_old_trans_index_code">OriTransIndexCode</string>
+    <string name="please_input_old_transid">OriTransId</string>
+    <string name="please_input_trans_amount">Amount</string>
+    <string name="please_input_tip_amount">TIP</string>
+    <string name="please_input_other_amount">OTHER AMT</string>
+    <string name="aidl_demo">AIDL DEMO</string>
+    <string name="trans_amount_demo">3</string>
+    <string name="tip_amount_demo">1</string>
+    <string name="other_amount_demo">1</string>
+    <string name="please_input_old_rrn">OriRrn</string>
+    <string name="please_input_old_invoice_number">OriInvoiceNumber</string>
+    <string name="lock_task_mode_txt">霸屏</string>
+    <string name="exist_lock_task_mode_txt">退出霸屏</string>
+</resources>
