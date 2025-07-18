@@ -302,7 +302,7 @@ class MainActivity : Activity() {
             tipAmount = binding.etTipAmount.text.toString()
             otherAmount = binding.etOtherAmount.text.toString()
             oriRrn = oldRRn
-            transIndexCode = Random(System.currentTimeMillis()).nextBytes(4).toHexString()
+            transIndexCode = Build.SERIAL + Random(System.currentTimeMillis()).nextBytes(4).toHexString()
             oriTraceNum = oldTrace
             oriTransIndexCode = oldTransIndexCode
             oriTransId = oldTransId
@@ -312,7 +312,6 @@ class MainActivity : Activity() {
             isSkipUI = false
         }
     }
-
 
 
     // A variable used to record the number of times the back button is clicked
