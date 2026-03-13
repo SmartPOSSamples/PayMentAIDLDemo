@@ -41,12 +41,7 @@ class MainActivity : Activity() {
     companion object {
 
         private const val TAG = "MainActivity"
-        const val AIDL_PACKAGE = "com.wizarpos.mpay"
-//        const val AIDL_PACKAGE = "com.smartpos.paywizard.tsys.smartpay"
-//        const val AIDL_PACKAGE = "com.smartpos.elavon.payment"
-//        const val AIDL_PACKAGE = "com.smartpos.tsys.smartpay"
-//        const val AIDL_PACKAGE = "com.wizarpos.opc"
-//        const val AIDL_PACKAGE = "com.wizarpos.cashieragent"
+        const val AIDL_PACKAGE = "com.wizarpos.opc"
         const val AIDL_ACTION = "com.wizarpos.payment.aidl.pay"
 
 
@@ -470,5 +465,6 @@ class MainActivity : Activity() {
             activity.window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_VISIBLE
         }
     }
+
 
 }
